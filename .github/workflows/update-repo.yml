@@ -1,0 +1,10 @@
+name: Update Databricks Workspace Repo
+on: 
+  push:
+    branches: main
+jobs:
+  Refresh-Workspace-Repo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -X GET "https://example.com/api/v2/endpoint"
