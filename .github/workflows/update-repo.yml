@@ -8,4 +8,4 @@ jobs:
     environment: prod
     steps:
       - run: |
-          curl -X PATCH "${{ vars.WORKSPACE_URL }}/api/2.0/repos/${{ vars.REPO_ID }}" -H "Authorization: Bearer ${{ secrets.DATABRICKS_PAT }}" -H "Content-Type: application/json" -d "{ 'branch': 'main' }"
+          curl -X PATCH "${{ vars.WORKSPACE_URL }}/api/2.0/repos/${{ vars.REPO_ID }}" -H "Authorization: Bearer ${{ secrets.DATABRICKS_PAT }}" -H "Content-Type: application/json" -d '{ "branch": "main" }'
