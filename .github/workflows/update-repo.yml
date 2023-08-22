@@ -5,6 +5,7 @@ on:
 jobs:
   Refresh-Workspace-Repo:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - run: |
-          curl -X GET "https://example.com/api/v2/endpoint"
+          curl -H "Authorization: Bearer ${{secrets:DATABRICKS_PAT}}" "$WORKSPACE_URL/api/2.0/repos/$REPO_ID"
