@@ -8,4 +8,4 @@ jobs:
     environment: prod
     steps:
       - run: |
-          curl -H "Authorization: Bearer ${{ secrets.DATABRICKS_PAT }}" "${{ vars.$WORKSPACE_URL }}/api/2.0/repos/${{ vars.$REPO_ID }}"
+          curl -H "Authorization: Bearer ${{ secrets.DATABRICKS_PAT }}" "${{ vars.WORKSPACE_URL }}/api/2.0/repos/${{ vars.REPO_ID }}"
